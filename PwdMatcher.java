@@ -15,13 +15,13 @@ public class PwdMatcher {
                 "Ewewewe-123", "PUCHU 123a");
         for (String userPwd : testPwds) {
             String pre = "[A-Za-z0-9!@#$%^&*()]*";
-            String regex2 = "((" +
+            String regex = "((" +
                     "((?=" + pre + "[A-Z])(?=" + pre + "[a-z])(?=" + pre + "[\\d]))|" +
                     "((?=" + pre + "[A-Z])(?=" + pre + "[a-z])(?=" + pre + "[!@#$%^&*()]))|" +
                     "((?=" + pre + "[A-Z])(?=" + pre + "[\\d])(?=" + pre + "[!@#$%^&*()]))|" +
                     "((?=" + pre + "[a-z])(?=" + pre + "[\\d])(?=" + pre + "[!@#$%^&*()]))" +
                     ")" + pre + "){8,}";
-            Pattern pwdPattern2 = Pattern.compile(regex2);
+            Pattern pwdPattern2 = Pattern.compile(regex);
             Matcher matcher2 = pwdPattern2.matcher(userPwd);
             try {
                 if (matcher2.find())
