@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class PwdMatcher {
 	
 	public static void main(String...args){
-		passwordMatcherNew("T=1Phyq011");
+		passwordMatcher("T=1Phyq011");
 	}
 	
 	public static void passwordMatcher(String inputPwd) {
